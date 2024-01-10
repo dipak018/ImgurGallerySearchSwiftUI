@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 enum LayoutType {
     case list
@@ -24,7 +25,7 @@ struct HomeContentView: View {
                     gridView
                 }
             }
-            .navigationTitle("Home").background(.green)
+            .navigationTitle("Home")
             .navigationBarItems(trailing:Button(action: {
                 viewModel.toggleLayout()
             }){
@@ -35,19 +36,54 @@ struct HomeContentView: View {
             })
         }.background(.orange)
         .ignoresSafeArea(edges: .bottom)
+        .onAppear {
+                    // Fetch data when the view appears
+                    viewModel.getData()
+                }
     }
     
     var listView: some View {
-        List(viewModel.items, id: \.id) { item in
-            Text(item.name)
-        }
+        List(viewModel.albumDataList, id: \.id) { albumEntity in
+            HStack {
+                ZStack {
+                    if let images = albumEntity.images {
+                        if let imageURLString = images[0].link {
+                            WebImage(url: URL(string:imageURLString))
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 100, height: 100)
+                                .cornerRadius(8)
+                        }
+                    }
+                }
+                Spacer()
+                VStack {
+                    HStack {
+                        if let title = albumEntity.title {
+                            Text(title)
+                                .multilineTextAlignment(.leading)
+                                .padding(5)
+                        }
+                        Spacer()
+                    }
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        if let timeInterval = albumEntity.datetime {
+                            Text(Date().getTime(timestamp: timeInterval)!)
+                        }
+                    }
+                }
+            }.frame(height: 100)
+        }.listStyle(PlainListStyle())
+            .background(Color.clear)
     }
-    
-    
+        
     var gridView: some View {
         LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
             ForEach(viewModel.items, id: \.id) { item in
                 Text(item.name)
+                Text(Date().getTime(timestamp: 1641776700)!)
             }
         }.background(.red)
             .padding()

@@ -8,6 +8,11 @@
 import SwiftUI
 
 class HomeViewModel: ObservableObject {
+    
+    // MARK: - Public Props
+    @Published var albumDataList:[AlbumEntity] = []
+    @Published var error: Error?
+    
     @Published var items: [MyModel] = []
     @Published var selectedLayout: LayoutType = .list
 
@@ -21,5 +26,20 @@ class HomeViewModel: ObservableObject {
 
     func toggleLayout() {
         selectedLayout = (selectedLayout == .list) ? .grid : .list
+    }
+    
+    func getData() {
+        APIManager.shared.request(inputString: "Random", modelType: GalleryDataEntity.self, type: .imgurGallery) { response in
+            switch response {
+            case .success(let galleryDataEntity):
+                DispatchQueue.main.async {
+                    if let albumArray = galleryDataEntity.data {
+                        self.albumDataList = albumArray
+                    }
+                }
+            case .failure(let error):
+                self.error = error
+            }
+        }
     }
 }
