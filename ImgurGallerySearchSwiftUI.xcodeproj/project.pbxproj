@@ -15,6 +15,18 @@
 		407CA1172B4ED1C0004BE8F8 /* ImgurGallerySearchSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1162B4ED1C0004BE8F8 /* ImgurGallerySearchSwiftUIUITestsLaunchTests.swift */; };
 		407CA1282B4EFC8A004BE8F8 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1272B4EFC8A004BE8F8 /* HomeContentView.swift */; };
 		407CA12A2B4EFD0E004BE8F8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1292B4EFD0E004BE8F8 /* HomeViewModel.swift */; };
+		407CA1322B4F1D4D004BE8F8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1312B4F1D4D004BE8F8 /* Date+Extension.swift */; };
+		407CA13F2B4F20BC004BE8F8 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1352B4F20BC004BE8F8 /* EndPointType.swift */; };
+		407CA1402B4F20BC004BE8F8 /* ImgurGalleryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1362B4F20BC004BE8F8 /* ImgurGalleryEndpoint.swift */; };
+		407CA1422B4F20BC004BE8F8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA13A2B4F20BC004BE8F8 /* Reachability.swift */; };
+		407CA1432B4F20BC004BE8F8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA13C2B4F20BC004BE8F8 /* Constant.swift */; };
+		407CA1442B4F20BC004BE8F8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA13E2B4F20BC004BE8F8 /* APIManager.swift */; };
+		407CA1472B4F2168004BE8F8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 407CA1462B4F2168004BE8F8 /* Alamofire */; };
+		407CA14C2B4F21DF004BE8F8 /* TagsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1482B4F21DF004BE8F8 /* TagsEntity.swift */; };
+		407CA14D2B4F21DF004BE8F8 /* AlbumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1492B4F21DF004BE8F8 /* AlbumEntity.swift */; };
+		407CA14E2B4F21DF004BE8F8 /* ImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA14A2B4F21DF004BE8F8 /* ImageEntity.swift */; };
+		407CA14F2B4F21DF004BE8F8 /* GalleryDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA14B2B4F21DF004BE8F8 /* GalleryDataEntity.swift */; };
+		407CA1542B4F2CEF004BE8F8 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA1532B4F2CEF004BE8F8 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +58,17 @@
 		407CA1162B4ED1C0004BE8F8 /* ImgurGallerySearchSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		407CA1272B4EFC8A004BE8F8 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		407CA1292B4EFD0E004BE8F8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		407CA1312B4F1D4D004BE8F8 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		407CA1352B4F20BC004BE8F8 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		407CA1362B4F20BC004BE8F8 /* ImgurGalleryEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurGalleryEndpoint.swift; sourceTree = "<group>"; };
+		407CA13A2B4F20BC004BE8F8 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		407CA13C2B4F20BC004BE8F8 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		407CA13E2B4F20BC004BE8F8 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		407CA1482B4F21DF004BE8F8 /* TagsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsEntity.swift; sourceTree = "<group>"; };
+		407CA1492B4F21DF004BE8F8 /* AlbumEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumEntity.swift; sourceTree = "<group>"; };
+		407CA14A2B4F21DF004BE8F8 /* ImageEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEntity.swift; sourceTree = "<group>"; };
+		407CA14B2B4F21DF004BE8F8 /* GalleryDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDataEntity.swift; sourceTree = "<group>"; };
+		407CA1532B4F2CEF004BE8F8 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407CA1472B4F2168004BE8F8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +120,13 @@
 		407CA0F82B4ED1BE004BE8F8 /* ImgurGallerySearchSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				407CA13B2B4F20BC004BE8F8 /* Constant */,
+				407CA13D2B4F20BC004BE8F8 /* Service */,
+				407CA1332B4F20BC004BE8F8 /* Utility */,
+				407CA1302B4F1D27004BE8F8 /* Resources */,
+				407CA12B2B4F1D21004BE8F8 /* Foundation */,
 				407CA1232B4EFB7F004BE8F8 /* MVVM */,
 				407CA0F92B4ED1BE004BE8F8 /* ImgurGallerySearchSwiftUIApp.swift */,
-				407CA0FD2B4ED1C0004BE8F8 /* Assets.xcassets */,
 				407CA0FF2B4ED1C0004BE8F8 /* Preview Content */,
 			);
 			path = ImgurGallerySearchSwiftUI;
@@ -150,6 +178,10 @@
 		407CA1252B4EFB7F004BE8F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				407CA1492B4F21DF004BE8F8 /* AlbumEntity.swift */,
+				407CA14B2B4F21DF004BE8F8 /* GalleryDataEntity.swift */,
+				407CA14A2B4F21DF004BE8F8 /* ImageEntity.swift */,
+				407CA1482B4F21DF004BE8F8 /* TagsEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +192,89 @@
 				407CA1272B4EFC8A004BE8F8 /* HomeContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		407CA12B2B4F1D21004BE8F8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				407CA1502B4F2CB8004BE8F8 /* UICommon */,
+				407CA12C2B4F1D21004BE8F8 /* Extensions */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		407CA12C2B4F1D21004BE8F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				407CA12D2B4F1D21004BE8F8 /* Swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		407CA12D2B4F1D21004BE8F8 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				407CA1312B4F1D4D004BE8F8 /* Date+Extension.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		407CA1302B4F1D27004BE8F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				407CA0FD2B4ED1C0004BE8F8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		407CA1332B4F20BC004BE8F8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				407CA1342B4F20BC004BE8F8 /* EndPoints */,
+				407CA1392B4F20BC004BE8F8 /* Reachability */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		407CA1342B4F20BC004BE8F8 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				407CA1352B4F20BC004BE8F8 /* EndPointType.swift */,
+				407CA1362B4F20BC004BE8F8 /* ImgurGalleryEndpoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		407CA1392B4F20BC004BE8F8 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				407CA13A2B4F20BC004BE8F8 /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		407CA13B2B4F20BC004BE8F8 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				407CA13C2B4F20BC004BE8F8 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		407CA13D2B4F20BC004BE8F8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				407CA13E2B4F20BC004BE8F8 /* APIManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		407CA1502B4F2CB8004BE8F8 /* UICommon */ = {
+			isa = PBXGroup;
+			children = (
+				407CA1532B4F2CEF004BE8F8 /* AsyncImageView.swift */,
+			);
+			path = UICommon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +293,9 @@
 			dependencies = (
 			);
 			name = ImgurGallerySearchSwiftUI;
+			packageProductDependencies = (
+				407CA1462B4F2168004BE8F8 /* Alamofire */,
+			);
 			productName = ImgurGallerySearchSwiftUI;
 			productReference = 407CA0F62B4ED1BE004BE8F8 /* ImgurGallerySearchSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +368,9 @@
 				Base,
 			);
 			mainGroup = 407CA0ED2B4ED1BE004BE8F8;
+			packageReferences = (
+				407CA1452B4F2168004BE8F8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 407CA0F72B4ED1BE004BE8F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,9 +413,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407CA1322B4F1D4D004BE8F8 /* Date+Extension.swift in Sources */,
 				407CA1282B4EFC8A004BE8F8 /* HomeContentView.swift in Sources */,
+				407CA14C2B4F21DF004BE8F8 /* TagsEntity.swift in Sources */,
+				407CA1442B4F20BC004BE8F8 /* APIManager.swift in Sources */,
+				407CA1432B4F20BC004BE8F8 /* Constant.swift in Sources */,
 				407CA12A2B4EFD0E004BE8F8 /* HomeViewModel.swift in Sources */,
+				407CA13F2B4F20BC004BE8F8 /* EndPointType.swift in Sources */,
+				407CA1402B4F20BC004BE8F8 /* ImgurGalleryEndpoint.swift in Sources */,
+				407CA1542B4F2CEF004BE8F8 /* AsyncImageView.swift in Sources */,
 				407CA0FA2B4ED1BE004BE8F8 /* ImgurGallerySearchSwiftUIApp.swift in Sources */,
+				407CA14F2B4F21DF004BE8F8 /* GalleryDataEntity.swift in Sources */,
+				407CA14E2B4F21DF004BE8F8 /* ImageEntity.swift in Sources */,
+				407CA1422B4F20BC004BE8F8 /* Reachability.swift in Sources */,
+				407CA14D2B4F21DF004BE8F8 /* AlbumEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +750,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		407CA1452B4F2168004BE8F8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		407CA1462B4F2168004BE8F8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 407CA1452B4F2168004BE8F8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 407CA0EE2B4ED1BE004BE8F8 /* Project object */;
 }
