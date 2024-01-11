@@ -14,7 +14,8 @@ enum LayoutType {
 }
 
 struct HomeContentView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @StateObject var viewModel = HomeViewModel()
+    //    @State private var searchText = ""
     
     var body: some View {
         NavigationView {
@@ -24,22 +25,32 @@ struct HomeContentView: View {
                 } else {
                     gridView
                 }
+            }.searchable(text: $viewModel.searchText) {
+            }
+            .onSubmit(of: .search) {
+                viewModel.findImages()
             }
             .navigationTitle("Home")
+            .overlay {
+                    if viewModel.albumDataList.isEmpty {
+                        Text("No results found").bold()
+                            .foregroundColor(.secondary)
+                            .padding(.top, 20)
+                    }
+                }
             .navigationBarItems(trailing:Button(action: {
                 viewModel.toggleLayout()
             }){
-                Image(systemName: viewModel.selectedLayout == .list ? "list.bullet" : "square.grid.2x2")
+                Image(systemName: viewModel.selectedLayout == .list ? "square.grid.2x2" : "list.bullet")
                     .foregroundColor(.gray)
                     .imageScale(.large)
                     .padding()
             })
-        }.background(.orange)
+        }
         .ignoresSafeArea(edges: .bottom)
         .onAppear {
-                    // Fetch data when the view appears
-                    viewModel.getData()
-                }
+            viewModel.findImages()
+        }
     }
     
     var listView: some View {
@@ -62,7 +73,7 @@ struct HomeContentView: View {
                         if let title = albumEntity.title {
                             Text(title)
                                 .multilineTextAlignment(.leading)
-                                .padding(5)
+                                .padding()
                         }
                         Spacer()
                     }
@@ -75,18 +86,45 @@ struct HomeContentView: View {
                     }
                 }
             }.frame(height: 100)
-        }.listStyle(PlainListStyle())
-            .background(Color.clear)
+        }
     }
-        
+    
     var gridView: some View {
-        LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
-            ForEach(viewModel.items, id: \.id) { item in
-                Text(item.name)
-                Text(Date().getTime(timestamp: 1641776700)!)
-            }
-        }.background(.red)
-            .padding()
+        ScrollView {
+            LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
+                ForEach(viewModel.albumDataList, id: \.id) { albumEntity in
+                    ZStack {
+                        if let images = albumEntity.images {
+                            if let imageURLString = images[0].link {
+                                WebImage(url: URL(string:imageURLString))
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 170, height: 120)
+                                    .cornerRadius(8)
+                            }
+                        }
+                        
+                        VStack {
+                            HStack {
+                                if let title = albumEntity.title {
+                                    Text(title)
+                                        .multilineTextAlignment(.leading)
+                                        .padding(5)
+                                }
+                                Spacer()
+                            }
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                if let timeInterval = albumEntity.datetime {
+                                    Text(Date().getTime(timestamp: timeInterval)!).padding(.trailing)
+                                }
+                            }
+                        }.frame(width: 170, height: 60)
+                    }
+                }.padding(.bottom,5)
+            }.padding()
+        }
     }
 }
 

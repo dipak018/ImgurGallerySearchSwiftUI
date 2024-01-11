@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4002BA452B4FC63C00EB7A77 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4002BA442B4FC63C00EB7A77 /* SearchBar.swift */; };
 		407CA0FA2B4ED1BE004BE8F8 /* ImgurGallerySearchSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CA0F92B4ED1BE004BE8F8 /* ImgurGallerySearchSwiftUIApp.swift */; };
 		407CA0FE2B4ED1C0004BE8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407CA0FD2B4ED1C0004BE8F8 /* Assets.xcassets */; };
 		407CA1012B4ED1C0004BE8F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407CA1002B4ED1C0004BE8F8 /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4002BA442B4FC63C00EB7A77 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		407CA0F62B4ED1BE004BE8F8 /* ImgurGallerySearchSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgurGallerySearchSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407CA0F92B4ED1BE004BE8F8 /* ImgurGallerySearchSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchSwiftUIApp.swift; sourceTree = "<group>"; };
 		407CA0FD2B4ED1C0004BE8F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				407CA1532B4F2CEF004BE8F8 /* AsyncImageView.swift */,
+				4002BA442B4FC63C00EB7A77 /* SearchBar.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			files = (
 				407CA1322B4F1D4D004BE8F8 /* Date+Extension.swift in Sources */,
 				407CA1282B4EFC8A004BE8F8 /* HomeContentView.swift in Sources */,
+				4002BA452B4FC63C00EB7A77 /* SearchBar.swift in Sources */,
 				407CA14C2B4F21DF004BE8F8 /* TagsEntity.swift in Sources */,
 				407CA1442B4F20BC004BE8F8 /* APIManager.swift in Sources */,
 				407CA1432B4F20BC004BE8F8 /* Constant.swift in Sources */,
@@ -599,8 +603,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,9 +612,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ios.ImgurGallerySearchSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -627,8 +633,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,9 +642,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ios.ImgurGallerySearchSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
