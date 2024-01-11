@@ -32,12 +32,12 @@ struct HomeContentView: View {
             }
             .navigationTitle("Home")
             .overlay {
-                    if viewModel.albumDataList.isEmpty {
-                        Text("No results found").bold()
-                            .foregroundColor(.secondary)
-                            .padding(.top, 20)
-                    }
+                if viewModel.albumDataList.isEmpty {
+                    Text("No results found").bold()
+                        .foregroundColor(.secondary)
+                        .padding(.top, 20)
                 }
+            }
             .navigationBarItems(trailing:Button(action: {
                 viewModel.toggleLayout()
             }){
@@ -73,7 +73,8 @@ struct HomeContentView: View {
                         if let title = albumEntity.title {
                             Text(title)
                                 .multilineTextAlignment(.leading)
-                                .padding()
+                                .lineLimit(3)
+                                .foregroundColor(.orange)
                         }
                         Spacer()
                     }
@@ -84,7 +85,7 @@ struct HomeContentView: View {
                             Text(Date().getTime(timestamp: timeInterval)!)
                         }
                     }
-                }
+                }.padding(0)
             }.frame(height: 100)
         }
     }
@@ -100,29 +101,33 @@ struct HomeContentView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 170, height: 120)
-                                    .cornerRadius(8)
                             }
                         }
-                        
                         VStack {
-                            HStack {
-                                if let title = albumEntity.title {
-                                    Text(title)
-                                        .multilineTextAlignment(.leading)
-                                        .padding(5)
-                                }
-                                Spacer()
-                            }
                             Spacer()
-                            HStack {
-                                Spacer()
-                                if let timeInterval = albumEntity.datetime {
-                                    Text(Date().getTime(timestamp: timeInterval)!).padding(.trailing)
+                            VStack {
+                                HStack {
+                                    if let title = albumEntity.title {
+                                        Text(title)
+                                            .multilineTextAlignment(.leading)
+                                            .padding(5)
+                                            .foregroundColor(.white)
+                                            .font(.system(size: 16)).multilineTextAlignment(.leading)
+                                    }
+                                    Spacer()
                                 }
-                            }
-                        }.frame(width: 170, height: 60)
+                                HStack {
+                                    Spacer()
+                                    if let timeInterval = albumEntity.datetime {
+                                        Text(Date().getTime(timestamp: timeInterval)!)
+                                            .padding(.trailing)
+                                            .foregroundColor(.white).font(.system(size: 14))
+                                    }
+                                }
+                            }.frame(width: 170, height: 60,alignment: .bottom).background(.orange.opacity(0.8))
+                        }.frame(width: 170, height: 120)
                     }
-                }.padding(.bottom,5)
+                }.cornerRadius(8).padding(.bottom,5)
             }.padding()
         }
     }
